@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class poder extends Actor
 {
-    
+    public int temp=50;
     /**
      * Act - do whatever the poder wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,13 +28,21 @@ public class poder extends Actor
     }
     
     public void acertarAlvo(){
-        Actor b = getOneIntersectingObject(macaco.class); 
-         if(b != null){
-             Counter counter = (Counter) getWorld().getObjects(Counter.class).get(0);
-             counter.add(1);
-                 getWorld().removeObject(b);
+        Actor a = getOneIntersectingObject(macaco.class); 
+         if(a != null){
+             Counter2 counter2 = (Counter2) getWorld().getObjects(Counter2.class).get(0);
+             counter2.add(1);
+                 getWorld().removeObject(a);
                  getWorld().removeObject(this);
+                 temp=0;
+                 if(temp<1){
+                     meninasvencem world = new meninasvencem();
+                     Greenfoot. setWorld(world);
+                    }
     
          }
+
+     }
+    
     }
-}
+

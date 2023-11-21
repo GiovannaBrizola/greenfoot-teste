@@ -34,7 +34,7 @@ atraso = 0;
 }
 
 //iniciar o jogo
- if (Greenfoot.isKeyDown("space")){
+ if (Greenfoot.isKeyDown("shift")){
 Mundo world = new Mundo();
 setBackground(new GreenfootImage("3.png"));
 }
@@ -43,6 +43,7 @@ Mundo world = new Mundo();
 Greenfoot.setWorld(world);
   }
 }
+    
     private void prepare()
     {
     }

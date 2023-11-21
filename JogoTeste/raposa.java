@@ -32,7 +32,7 @@ public class raposa extends Actor
         else if(Greenfoot.isKeyDown("d")){
             this.setLocation(this.getX() +speed, this.getY());
         }
-        else if(Greenfoot.isKeyDown("g") && (sTimer == 0)){
+        else if(Greenfoot.isKeyDown("p") && (sTimer == 0)){
             getWorld().addObject(new poder(), getX() + 100, getY() +30);
             sTimer ++;
             poder.play();           
